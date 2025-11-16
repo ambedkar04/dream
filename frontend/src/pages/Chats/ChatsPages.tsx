@@ -162,9 +162,11 @@ const ChatsPage: React.FC = () => {
     : chats;
 
   return (
-    <div className="flex h-screen bg-gray-50">
-      {/* Sidebar */}
-      <Sidebar />
+    <div className="flex flex-col md:flex-row h-screen bg-gray-50">
+      {/* Sidebar - Hidden on mobile, shown on medium screens and up */}
+      <div className="hidden md:block">
+        <Sidebar />
+      </div>
 
       {/* Main Content Area */}
       <div className="flex-1 flex flex-col overflow-hidden">

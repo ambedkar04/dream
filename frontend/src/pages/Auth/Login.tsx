@@ -98,7 +98,7 @@ function Login({ onSwitchToRegister, onSwitchToForgotPassword }: LoginProps) {
 
 
   return (
-    <div className="pt-6 sm:pt-0">
+    <div className="min-h-screen flex items-center justify-center p-4">
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-1 text-center pb-8">
           <CardTitle className="text-2xl font-bold">
@@ -214,7 +214,7 @@ function Login({ onSwitchToRegister, onSwitchToForgotPassword }: LoginProps) {
         </div>
 
         {/* Sign Up Link */}
-        <div className="text-center mt-6 pb-4">
+        <div className="text-center py-6">
           <p className="text-sm text-muted-foreground">
             Don't have an account?{" "}
             <button

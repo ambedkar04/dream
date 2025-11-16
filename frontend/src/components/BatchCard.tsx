@@ -44,10 +44,10 @@ const BatchCard: React.FC<BatchCardProps> = ({
   };
   
   return (
-    <Card className="overflow-hidden border border-gray-200 rounded-[5px] shadow-sm hover:shadow-md transition-all duration-200 p-0 flex flex-col h-full w-full max-w-[300px] mx-auto">
+    <Card className="overflow-hidden border border-gray-200 rounded-[5px] shadow-sm hover:shadow-md transition-all duration-200 p-0 flex flex-col h-full w-full max-w-[280px] mx-auto">
       <CardHeader className="p-0 m-0 leading-none">
         {/* Batch Thumbnail */}
-        <div className="relative w-full overflow-hidden" style={{ height: '140px', margin: 0, padding: 0, lineHeight: 0 }}>
+        <div className="relative w-full overflow-hidden" style={{ height: '135px', margin: '0', padding: '0', lineHeight: 0 }}>
           <img
             src={image || '/images/Batchthumbnail/thumbnail.jpg'}
             alt={`${name} - ${subject}`}
@@ -77,7 +77,7 @@ const BatchCard: React.FC<BatchCardProps> = ({
         <div className="text-sm text-gray-600 mb-4">
           <div className="space-y-2">
             <div className="flex items-center">
-              <Calendar className="h-4 w-4 mr-2 text-blue-600 flex-shrink-0" />
+              <Calendar className="h-4 w-4 mr-1 text-blue-600 flex-shrink-0" />
               <div className="flex flex-wrap items-center gap-x-2 text-xs">
                 <span className="whitespace-nowrap">
                   <span className="text-gray-500">Starts:</span> {new Date(startDate).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}

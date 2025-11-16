@@ -49,7 +49,10 @@ class CustomTokenObtainPairView(TokenObtainPairView):
 
     def post(self, request, *args, **kwargs):
         try:
-            return super().post(request, *args, **kwargs)
+            response = super().post(request, *args, **kwargs)
+            if response.status_code == 200:
+                response.data['message'] = "Login successful! Welcome back."
+            return response
         except AuthenticationFailed as exc:
             message = str(exc)
             if "No active account found" in message:

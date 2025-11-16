@@ -204,21 +204,23 @@ function Forgot({ onSwitchToLogin }: ForgotProps) {
   };
 
   return (
-    <Card className="w-full max-w-md">
-        {renderStepContent()}
+    <div className="min-h-screen flex items-center justify-center p-4">
+      <Card className="w-full max-w-md">
+          {renderStepContent()}
 
-        {step === 1 && (
-          <div className="text-center mt-4 pb-6">
-            <button
-              onClick={handleBackToLogin}
-              className="inline-flex items-center text-sm text-muted-foreground hover:underline transition-colors cursor-pointer"
-            >
-              <ArrowLeft className="h-4 w-4 mr-1" />
-              Back to Login
-            </button>
-          </div>
-        )}
-      </Card>
+          {step === 1 && (
+            <div className="text-center py-6">
+              <button
+                onClick={handleBackToLogin}
+                className="inline-flex items-center text-sm text-muted-foreground hover:underline transition-colors cursor-pointer"
+              >
+                <ArrowLeft className="h-4 w-4 mr-1" />
+                Back to Login
+              </button>
+            </div>
+          )}
+        </Card>
+      </div>
   );
 }
 

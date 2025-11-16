@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Bell, User, ShoppingBag, LogOut, Menu as MenuIcon, BookOpen, FileText, Library, Store, Mail, Info, ChevronRight, Sun, Moon } from "lucide-react";
+import { Bell, User, ShoppingBag, LogOut, Menu as MenuIcon, BookOpen, FileText, Library, Store, Mail, Info, ChevronRight, Sun, Moon, Users } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Link } from "react-router-dom";
 import { logoutUser } from "@/lib/api";
@@ -47,6 +47,7 @@ const Menubar = ({ className = "" }) => {
 
   const navigationItems: NavigationItem[] = [
     { name: "Study", icon: BookOpen, href: "/study" },
+    { name: "Batches", icon: Users, href: "/batches" },
     { name: "Test Series", icon: FileText, href: "/test-series-page" },
     { name: "Library", icon: Library, href: "/library" },
     { name: "Store", icon: Store, href: "/store" },
